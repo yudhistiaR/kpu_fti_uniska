@@ -1,11 +1,13 @@
-import MainLayout from "@/components/layouts/main";
-import Navigation from "@/components/navigation";
+import MainLayout from '@/components/layouts/main';
+import Navigation from '@/components/navigation';
+import Navbar from '@/components/navbar/Navbar';
 
 const BilikLayout = ({ children }) => {
   return (
     <MainLayout>
-      <div className="w-full mt-14 p-4">{children}</div>
       <Navigation />
+      <div className="w-full mt-14 p-4">{children}</div>
+      <Navbar />
     </MainLayout>
   );
 };
