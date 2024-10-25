@@ -1,29 +1,26 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const Navigation = () => {
-  const route = usePathname();
-  const [name, setName] = useState("");
+  const path = usePathname();
+  const [name, setName] = useState(undefined);
 
   useEffect(() => {
-    if (route === "/") {
-      setName("Category");
-    } else if (route === "/bilik/bem") {
-      setName("Bilik BEM FTI");
-    } else if (route === "/bilik/hmpti") {
-      setName("Bilik HMP-TI FTI");
-    } else if (route === "/bilik/hmpsi") {
-      setName("Bilik HMP-SI FTI");
+    if (path === '/') {
+      setName('Categoty');
+    } else if (path) {
+      setName(`Bilik ${path.replace('/', '').toUpperCase()}`);
     } else {
-      setName(route);
+      setName('KPU FTI UNISKA');
     }
-  }, [route]);
+  }, []);
 
   return (
     <div className="text-xl font-semibold fixed bg-white w-full top-0 left-0 p-3 shadow-sm z-20">
-      <h1>{name ?? "Loading..."}</h1>
+      <Link href="/">{name ?? 'Loading...'}</Link>
     </div>
   );
 };

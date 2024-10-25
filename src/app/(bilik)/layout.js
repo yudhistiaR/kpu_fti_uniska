@@ -1,14 +1,15 @@
 import MainLayout from '@/components/layouts/main';
-import Menu from '@/components/menu/Menu';
 import Navigation from '@/components/navigation';
 import Navbar from '@/components/navbar/Navbar';
 
-export default function Home() {
+const BilikLayout = ({ children }) => {
   return (
     <MainLayout>
       <Navigation />
-      <Menu />
+      <div className="w-full mt-14 p-4">{children}</div>
       <Navbar />
     </MainLayout>
   );
-}
+};
+
+export default BilikLayout;
