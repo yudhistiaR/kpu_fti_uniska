@@ -1,17 +1,34 @@
+'use client';
+
 import {
   Card,
   CardHeader,
   CardTitle,
   CardFooter,
   CardContent,
-  CardDescription,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+  CardDescription
+} from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
-const LoginPage = async () => {
+const LoginPage = () => {
+  const loginFetch = async () => {
+    await fetch('/api/v1/login', {
+      method: 'POST',
+      body: JSON.stringify({ npm: '2110020054', password: 'rahman.220' })
+    }).then(res => {
+      if (!res.ok) {
+        console.log(res);
+      } else {
+        console.log(res);
+      }
+    });
+
+    return;
+  };
+
   return (
     <Card>
       <CardHeader>
@@ -49,7 +66,7 @@ const LoginPage = async () => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full" size="lg">
+        <Button onClick={loginFetch} className="w-full" size="lg">
           Log In
         </Button>
       </CardFooter>
