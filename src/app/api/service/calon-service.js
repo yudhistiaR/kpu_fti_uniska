@@ -12,4 +12,22 @@ export class CalonService {
 
     return response;
   }
+
+  static async getAll() {
+    const data = await prisma.calon.findMany();
+    const counte = await prisma.calon.count();
+
+    return {
+      data,
+      counte
+    };
+  }
+
+  static async get(calon_id) {
+    return await prisma.calon.findMany({
+      where: {
+        id: calon_id
+      }
+    });
+  }
 }

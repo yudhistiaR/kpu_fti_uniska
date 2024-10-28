@@ -12,4 +12,30 @@ export class CalonController {
       return errorResponse(error);
     }
   }
+  
+  static async getAll() {
+    try {
+      const response = await CalonService.getAll();
+      return NextResponse.json(response, { status: 200 });
+    } catch (error) {
+      return errorResponse(error);
+    }
+  }
+
+  static async get(calon_id) {
+    try {
+      const response = await CalonService.get(calon_id);
+
+      if (response <= 0) {
+        return NextResponse.json(
+          { message: 'Calon not found' },
+          { status: 404 }
+        );
+      }
+
+      return NextResponse.json(response, { status: 200 });
+    } catch (error) {
+      return errorResponse(error);
+    }
+  }
 }
