@@ -12,7 +12,7 @@ export class CalonController {
       return errorResponse(error);
     }
   }
-  
+
   static async getAll() {
     try {
       const response = await CalonService.getAll();
@@ -34,6 +34,35 @@ export class CalonController {
       }
 
       return NextResponse.json(response, { status: 200 });
+    } catch (error) {
+      return errorResponse(error);
+    }
+  }
+
+  static async delete(calon_id) {
+    try {
+      if (!calon_id) {
+        return NextResponse.json(
+          { message: 'id is required' },
+          { status: 400 }
+        );
+      }
+
+      let calon = await CalonService.get(calon_id);
+
+      if (!calon || calon.length === 0) {
+        return NextResponse.json(
+          { message: 'Calon not found' },
+          { status: 404 }
+        );
+      }
+
+      await CalonService.delete(calon_id);
+
+      return NextResponse.json(
+        { message: 'Calon deleted successfully' },
+        { status: 200 }
+      );
     } catch (error) {
       return errorResponse(error);
     }
