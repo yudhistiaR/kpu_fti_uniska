@@ -18,4 +18,16 @@ export class CalonValidation {
     no_urut: z.number().min(1),
     type: z.enum(type).default(null)
   });
+
+  static UPDATE = z.object({
+    nama: z.string().min(1).max(50).optional(),
+    visi: z.string().min(1).optional(),
+    misi: z.string().min(1).optional(),
+    prodi: z.string().min(1).optional(),
+    foto: z.string().optional(),
+    angkatan: z.number().min(1).optional(),
+    tgl_lahir: z.string().datetime().optional(),
+    no_urut: z.number().min(1).optional(),
+    type: z.enum(type).default(null).optional()
+  });
 }
