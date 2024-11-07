@@ -64,4 +64,18 @@ export class CalonController {
       return errorResponse(error);
     }
   }
+
+  static async update(req, calon_id) {
+    try {
+      const userReq = await req.json();
+      Validation.Validate(CalonValidation.CALON_ID, { id: calon_id });
+      Validation.Validate(CalonValidation.UPDATE, userReq);
+
+      const response = await CalonService.update(userReq, calon_id);
+
+      return NextResponse.json(response, { status: 200 });
+    } catch (error) {
+      return errorResponse(error);
+    }
+  }
 }

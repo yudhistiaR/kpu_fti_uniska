@@ -38,4 +38,13 @@ export class CalonService {
       }
     });
   }
+
+  static async update(req, calon_id) {
+    return await prisma.calon.update({
+      where: {
+        id: calon_id
+      },
+      data: req
+    });
+  }
 }
