@@ -1,4 +1,6 @@
 import { CalonService } from '../service/calon-service';
+import { Validation } from '../validation/Validation';
+import { CalonValidation } from '../validation/calon-validation';
 import { errorResponse } from '../error/response';
 import { NextResponse } from 'next/server';
 
@@ -41,12 +43,7 @@ export class CalonController {
 
   static async delete(calon_id) {
     try {
-      if (!calon_id) {
-        return NextResponse.json(
-          { message: 'id is required' },
-          { status: 400 }
-        );
-      }
+      Validation.Validate(CalonValidation.CALON_ID, { id: calon_id });
 
       let calon = await CalonService.get(calon_id);
 

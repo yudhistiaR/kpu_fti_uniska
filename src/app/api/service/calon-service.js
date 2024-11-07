@@ -30,13 +30,12 @@ export class CalonService {
       }
     });
   }
-  
+
   static async delete(calon_id) {
-    const a = await prisma.calon.deleteMany({
+    return await prisma.calon.deleteMany({
       where: {
         id: calon_id
       }
     });
   }
-
 }
