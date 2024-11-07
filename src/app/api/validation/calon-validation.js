@@ -1,9 +1,12 @@
-import { Type } from 'lucide-react';
 import { z } from 'zod';
 
 const type = ['TI', 'SI', 'BEM'];
 
 export class CalonValidation {
+  static CALON_ID = z.object({
+    id: z.string().uuid({ message: 'id must be uuid' })
+  });
+
   static CREATE = z.object({
     nama: z.string().min(1).max(50),
     visi: z.string().min(1),
