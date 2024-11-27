@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum StatusAkun {
+  Pelaksana
+  Mahasiswa
+}
+
+enum TypeCalon {
+  ti
+  si
+  bem
+}
+
+model Pemilih {
+  npm         String     @id @unique
+  prodi       String?
+  status_hmp  Boolean    @default(false)
+  status_bem  Boolean    @default(false)
+  status_akun StatusAkun @default(Mahasiswa)
+
+  votingCalon VotingCalon[]
+}
+
+model Calon {
+  id        String    @id @default(uuid())
+  nama      String
+  visi      String    @db.Text
+  misi      String    @db.Text
+  prodi     String
+  foto      String
+  angkatan  Int
+  tgl_lahir DateTime
+  no_urut   Int
+  type      TypeCalon
+
+  pemilih VotingCalon[]
+}
+
+model VotingCalon {
+  calon_id String
+  npm      String
+  Pemilih  Pemilih @relation(fields: [npm], references: [npm])
+  Calon    Calon   @relation(fields: [calon_id], references: [id])
+
+  @@id([calon_id, npm])
+}
