@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '../ui/button';
 import { toast } from 'sonner';
 
 import { useState } from 'react';
