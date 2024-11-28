@@ -57,7 +57,7 @@ const VotingAction = ({ calon_id, npm }) => {
         >
           Voting
         </AlertDialogTrigger>
-        <AlertDialogContent className="max-w-sm">
+        <AlertDialogContent className="max-w-xs">
           <AlertDialogHeader>
             <AlertDialogTitle>Apakah anda yankin?</AlertDialogTitle>
             <AlertDialogDescription>
