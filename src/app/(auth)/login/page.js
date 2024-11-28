@@ -39,7 +39,7 @@ const LoginPage = () => {
           const err = await res.json();
           toast.error(err.message);
         } else {
-          route.push('/');
+          await route.push('/');
         }
       })
       .finally(() => {
