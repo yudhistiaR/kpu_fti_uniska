@@ -60,7 +60,7 @@ const Logout = () => {
           <div className="text-md font-light">LogOut</div>
         </div>
       </AlertDialogTrigger>
-      <AlertDialogContent className="max-w-sm text-start">
+      <AlertDialogContent className="max-w-xs text-start">
         <AlertDialogHeader>
           <AlertDialogTitle>Keluar</AlertDialogTitle>
           <AlertDialogDescription>
