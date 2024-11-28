@@ -5,7 +5,7 @@
  */
 
 export const fetchData = async url => {
-  const res = await fetch(`http://localhost:3000${url}`, {
+  const res = await fetch(`${process.env.API_URL}${url}`, {
     method: 'GET'
   });
 
