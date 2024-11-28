@@ -5,10 +5,11 @@
  */
 
 export const fetchData = async url => {
-  const res = await fetch(`${process.env.API_URL}/${url}`, {
-    method: 'GET',
-    cache: 'no-store'
+  const res = await fetch(`http://localhost:3000${url}`, {
+    method: 'GET'
   });
+
+  console.log(res);
 
   const data = await res.json();
 

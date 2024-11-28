@@ -16,6 +16,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger
 } from '@/components/ui/alert-dialog';
+import { buttonVariants } from '../ui/button';
 
 const VotingAction = ({ calon_id, npm }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -39,14 +40,12 @@ const VotingAction = ({ calon_id, npm }) => {
   return (
     <>
       <AlertDialog>
-        <AlertDialogTrigger className="w-full">
-          <Button
-            disabeld={isLoading}
-            size="lg"
-            className="w-full font-semibold"
-          >
-            Voting
-          </Button>
+        <AlertDialogTrigger
+          disabeld={isLoading}
+          size="lg"
+          className={`${buttonVariants()} font-semibold w-full`}
+        >
+          Voting
         </AlertDialogTrigger>
         <AlertDialogContent className="max-w-sm">
           <AlertDialogHeader>
