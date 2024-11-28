@@ -22,18 +22,29 @@ const VotingAction = ({ calon_id, npm }) => {
 
   const onClick = async () => {
     setIsLoading(true);
-    return await fetch(`/api/v1/voting`, {
+
+    const request = fetch(`/api/v1/voting`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ calon_id, npm })
-    })
-      .then(async res => {
-        if (!res.ok) {
-          const err = await res.json();
-          return toast.error(err.message);
-        }
-        toast.success('Hak pilih berhasil digunakan');
-      })
-      .finally(() => setIsLoading(false));
+    }).then(async res => {
+      if (!res.ok) {
+        const error = await res.json();
+        return Promise.reject(error);
+      } else {
+        return Promise.resolve(res);
+      }
+    });
+
+    toast.promise(request, {
+      loading: 'Loading...',
+      success: () => 'Hak pilih anda berhasil digunakan',
+      error: err => err.message || 'Failed to submit vote.'
+    });
+
+    request.finally(() => setIsLoading(false));
   };
 
   return (

@@ -38,11 +38,14 @@ const Logout = () => {
   const path = useRouter();
 
   const onClick = async () => {
-    return await fetch('/api/v1/logout', { method: 'DELETE' }).then(res => {
-      if (res.ok) {
-        path.push('/');
+    return await fetch('/api/v1/logout', { method: 'DELETE' }).then(
+      async res => {
+        if (res.ok) {
+          await path.push('/');
+        }
+        path.refresh();
       }
-    });
+    );
   };
 
   return (
