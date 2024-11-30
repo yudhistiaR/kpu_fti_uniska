@@ -14,14 +14,13 @@ const DetaulCalonPage = async ({ params: { calon_id } }) => {
   const token = cookie.get('token')?.value;
   const data = await fetchData(`/api/v1/calon/${calon_id}`);
 
-  const decoded = jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) {
-      cookie.delete('token');
-      return NextResponse.redirect(new URL('/login'));
+  const decoded = await jwt.verify(
+    token,
+    process.env.JWT_SECRET,
+    (_, decoded) => {
+      return decoded;
     }
-
-    return decoded;
-  });
+  );
 
   return (
     <section>
@@ -57,7 +56,7 @@ const DetaulCalonPage = async ({ params: { calon_id } }) => {
               </div>
             </div>
           </div>
-          <VotingAction calon_id={calon.id} npm={decoded.npm} />
+          <VotingAction calon_id={calon?.id} npm={decoded?.npm} />
         </div>
       ))}
     </section>

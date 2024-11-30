@@ -11,25 +11,23 @@ import { fetchData } from '@/hooks/fetch';
 import VotingAction from '@/components/action/Voting';
 import * as jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
-import { NextResponse } from 'next/server';
 
 const BilikPage = async ({ params: { bilik } }) => {
   const cookie = cookies();
   const token = cookie.get('token')?.value;
   const data = await fetchData(`/api/v1/prodi/${bilik}`);
 
-  const decoded = jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) {
-      cookie.delete('token');
-      return NextResponse.redirect(new URL('/login'));
+  const decoded = await jwt.verify(
+    token,
+    process.env.JWT_SECRET,
+    (_, decoded) => {
+      return decoded;
     }
-
-    return decoded;
-  });
+  );
 
   return (
     <div className="grid gap-4">
-      {data?.length !== 0 ? (
+      {data.length !== 0 ? (
         data?.map((calon, _) => (
           <Card key={calon.id}>
             <CardHeader>
@@ -59,7 +57,7 @@ const BilikPage = async ({ params: { bilik } }) => {
               >
                 Detail
               </Link>
-              <VotingAction calon_id={calon.id} npm={decoded.npm} />
+              <VotingAction calon_id={calon?.id} npm={decoded?.npm} />
             </CardFooter>
           </Card>
         ))
