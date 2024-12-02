@@ -9,8 +9,6 @@ export const fetchData = async url => {
     method: 'GET'
   });
 
-  console.log(res);
-
   const data = await res.json();
 
   return data;

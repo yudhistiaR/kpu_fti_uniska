@@ -3,7 +3,6 @@ import Image from 'next/image';
 import VotingAction from '@/components/action/Voting';
 import * as jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
-import { NextResponse } from 'next/server';
 
 export const metadata = {
   title: 'Detail calon'
