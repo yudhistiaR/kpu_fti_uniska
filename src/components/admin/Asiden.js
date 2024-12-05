@@ -45,7 +45,7 @@ const Aside = () => {
         <Item
           path={path}
           href="/admin/calon"
-          title="Tambah Calon"
+          title="Calon Action"
           icon={<IdCard />}
         />
         <Item

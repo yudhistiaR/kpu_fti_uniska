@@ -36,16 +36,14 @@ model Pemilih {
 }
 
 model Calon {
-  id        String    @id @default(uuid())
-  nama      String
-  visi      String    @db.Text
-  misi      String    @db.Text
-  prodi     String
-  foto      String
-  angkatan  Int
-  tgl_lahir DateTime
-  no_urut   Int
-  type      TypeCalon
+  id       String    @id @default(uuid())
+  nama     String
+  visiMisi String    @db.Text
+  prodi    String
+  foto     String
+  angkatan String
+  no_urut  String
+  type     TypeCalon
 
   pemilih VotingCalon[]
 }

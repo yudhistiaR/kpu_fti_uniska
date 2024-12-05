@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Calon" ALTER COLUMN "angkatan" SET DATA TYPE TEXT,
+ALTER COLUMN "no_urut" SET DATA TYPE TEXT;

@@ -10,7 +10,7 @@ import {
 
 const AdminPage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div className="w-full flex justify-between items-center gap-2">
         <div className="bg-white shadow-lg w-[350px] h-32 p-4 rounded-lg text-lg font-semibold">
           JUMLAH SELURUH CALON 2024

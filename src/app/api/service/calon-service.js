@@ -4,6 +4,7 @@ import { CalonValidation } from '../validation/calon-validation';
 
 export class CalonService {
   static async create(req) {
+    console.log(req);
     const userRequest = Validation.Validate(CalonValidation.CREATE, req);
 
     const response = await prisma.calon.create({

@@ -5,11 +5,16 @@
  */
 
 export const fetchData = async url => {
-  const res = await fetch(`${process.env.API_URL}${url}`, {
-    method: 'GET'
-  });
+  try {
+    const res = await fetch(`${process.env.API_URL}${url}`, {
+      method: 'GET'
+    });
 
-  const data = await res.json();
+    if (!res.ok) return [];
+    const data = await res.json();
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };

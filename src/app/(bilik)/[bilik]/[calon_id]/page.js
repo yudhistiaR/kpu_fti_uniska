@@ -3,6 +3,7 @@ import Image from 'next/image';
 import VotingAction from '@/components/action/Voting';
 import * as jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
+import parse from 'html-react-parser';
 
 export const metadata = {
   title: 'Detail calon'
@@ -20,6 +21,8 @@ const DetaulCalonPage = async ({ params: { calon_id } }) => {
       return decoded;
     }
   );
+
+  console.log(data);
 
   return (
     <section>
@@ -42,17 +45,10 @@ const DetaulCalonPage = async ({ params: { calon_id } }) => {
           <div className="my-8">
             <h1 className="text-start text-2xl font-semibold">{calon.nama}</h1>
             <h2>
-              {calon.prodi} || {calon.angkatan}
+              {calon.prodi.toUpperCase()} || {calon.angkatan}
             </h2>
             <div className="flex flex-col justify-center gap-2 mt-5">
-              <div>
-                <h2 className="text-center font-semibold">Visi</h2>
-                <p className="text-justify">{calon.visi}</p>
-              </div>
-              <div>
-                <h2 className="text-center font-semibold">Misi</h2>
-                <p>{calon.misi}</p>
-              </div>
+              {parse(calon.visiMisi)}
             </div>
           </div>
           <VotingAction calon_id={calon?.id} npm={decoded?.npm} />

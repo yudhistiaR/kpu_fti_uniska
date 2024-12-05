@@ -8,6 +8,7 @@ export class CalonController {
   static async create(req) {
     try {
       const userReq = await req.json();
+      console.log(userReq);
       const response = await CalonService.create(userReq);
       return NextResponse.json(response, { status: 200 });
     } catch (error) {
