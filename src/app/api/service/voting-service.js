@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import { ErrorResponse } from '../error/errorResponse';
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
+import { panitiaNPMList } from '@/lib/npmPanitia';
 
 export class VotingServices {
   static async vote(data, type) {
@@ -37,8 +38,18 @@ export class VotingServices {
     try {
       const decoded = token;
 
+      if (panitiaNPMList.includes(decoded.npm)) {
+        throw new ErrorResponse(
+          401,
+          'Panitia tidak diperbolehkan melakukan voting'
+        );
+      }
+
       if (decoded.status_akun === 'Pelaksana') {
-        throw new ErrorResponse(401, 'Panitia pelaksana tidak ada hak suara');
+        throw new ErrorResponse(
+          401,
+          'Panitia tidak diperbolehkan melakukan voting'
+        );
       }
 
       const calonInfo = await prisma.calon.findFirst({
