@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
-const ListCalon = dynamic(() => import('@/components/admin/ListCalon'));
+const ListCalon = dynamic(() => import('@/components/admin/ListCalon'), {
+  ssr: false
+});
 
 const ListCalonPage = () => {
   return (

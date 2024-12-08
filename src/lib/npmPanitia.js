@@ -28,5 +28,6 @@ export const panitiaNPMList = [
   '2110020106', // Yuria Sari Nurfitriani
   '2210020044', // Norrika Amalia
   '2210020046', // Nor Ainah
-  '2110010470' // Amin Haji
+  '2110010470', // Amin Haji
+  '2210020018' // Siti Kahdijah
 ];
