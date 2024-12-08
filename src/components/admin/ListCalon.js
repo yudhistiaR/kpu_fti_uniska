@@ -12,9 +12,7 @@ import Image from 'next/image';
 import parser from 'html-react-parser';
 import { toast } from 'sonner';
 
-const DeleteCalon = dynamic(() => import('../action/deleteCalon'), {
-  ssr: false
-});
+const DeleteCalon = dynamic(() => import('../action/deleteCalon'));
 
 const ListCalon = async () => {
   const fetchDataCalon = async () => {
