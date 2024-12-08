@@ -1,0 +1,16 @@
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T06:35:33.371Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:35:33.421Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:35:33.522Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:35:33.572Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+ERROR : "\nInvalid `prisma.calon.findMany()` invocation:\n\n\nCan't reach database server at `aws-0-ap-southeast-1.pooler.supabase.com:6543`\n\nPlease make sure your database server is running at `aws-0-ap-southeast-1.pooler.supabase.com:6543`."
+ERROR : "\nInvalid `prisma.calon.findMany()` invocation:\n\n\nCan't reach database server at `aws-0-ap-southeast-1.pooler.supabase.com:6543`\n\nPlease make sure your database server is running at `aws-0-ap-southeast-1.pooler.supabase.com:6543`."
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+ERROR : "\nInvalid `prisma.calon.findMany()` invocation:\n\n\nCan't reach database server at `aws-0-ap-southeast-1.pooler.supabase.com:6543`\n\nPlease make sure your database server is running at `aws-0-ap-southeast-1.pooler.supabase.com:6543`."
+ERROR : "\nInvalid `prisma.calon.findMany()` invocation:\n\n\nCan't reach database server at `aws-0-ap-southeast-1.pooler.supabase.com:6543`\n\nPlease make sure your database server is running at `aws-0-ap-southeast-1.pooler.supabase.com:6543`."
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T06:37:44.223Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:37:44.274Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:37:44.373Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE \"public\".\"Calon\".\"type\" = CAST($1::text AS \"public\".\"TypeCalon\") ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $2","params":"[\"bem\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T06:37:44.423Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
