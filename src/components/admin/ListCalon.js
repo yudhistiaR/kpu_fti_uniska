@@ -51,7 +51,7 @@ const ListCalon = async () => {
         </TableHeader>
         <TableBody>
           {data &&
-            data.map((item, idx) => (
+            data?.map((item, idx) => (
               <TableRow key={item.id} className="text-center">
                 <TableCell className="font-medium">{idx + 1}</TableCell>
                 <TableCell className="font-medium">
