@@ -10,9 +10,9 @@ export class LoginController {
       const request = await req.json();
       Validation.Validate(LoginValidation.LOGIN, request);
 
-      await LoginService.login(request);
+      const loginService = await LoginService.login(request);
 
-      return NextResponse.json('OK!!!', { status: 200 });
+      return NextResponse.json(loginService, { status: 200 });
     } catch (error) {
       return errorResponse(error);
     }

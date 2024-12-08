@@ -53,12 +53,14 @@
     "next": "14.2.15",
     "next-cloudinary": "^6.16.0",
     "react": "^18",
+    "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-medium-image-zoom": "^5.2.11",
     "sonner": "^1.7.0",
     "tailwind-merge": "^2.5.3",
     "tailwindcss-animate": "^1.0.7",
     "winston": "^3.15.0",
+    "winston-daily-rotate-file": "^5.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
-const panitiaNPMList = [
-  '23100020061', // Taibah (Ketua KPU)
+export const panitiaNPMList = [
+  '2310020061', // Taibah (Ketua KPU)
   '2310010007', // Berliana Ramadhanti Azzahra (Sekretaris Jenderal)
   '2310020082', // Nurhayati Dwi Lestari (CO Acara)
   '2410010312', // Syfa Febi Rahmayanti (CO Acara)
@@ -27,5 +27,6 @@ const panitiaNPMList = [
   '2210010398', // Renny Melanda Febriyanti
   '2110020106', // Yuria Sari Nurfitriani
   '2210020044', // Norrika Amalia
-  '2210020046' // Nor Ainah
+  '2210020046', // Nor Ainah
+  '2110010470' // Amin Haji
 ];

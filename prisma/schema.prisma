@@ -14,11 +14,6 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-enum StatusAkun {
-  Pelaksana
-  Mahasiswa
-}
-
 enum TypeCalon {
   ti
   si
@@ -26,11 +21,12 @@ enum TypeCalon {
 }
 
 model Pemilih {
-  npm         String     @id @unique
+  npm         String  @id @unique
+  nama        String?
   prodi       String?
-  status_hmp  Boolean    @default(false)
-  status_bem  Boolean    @default(false)
-  status_akun StatusAkun @default(Mahasiswa)
+  status_hmp  Boolean @default(false)
+  status_bem  Boolean @default(false)
+  status_akun String?
 
   votingCalon VotingCalon[]
 }

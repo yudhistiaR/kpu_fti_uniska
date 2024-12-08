@@ -27,7 +27,7 @@ const BilikPage = async ({ params: { bilik } }) => {
 
   return (
     <div className="grid gap-4">
-      {data.length !== 0 ? (
+      {data.length > 0 ? (
         data.map((calon, _) => (
           <Card key={calon.id}>
             <CardHeader>

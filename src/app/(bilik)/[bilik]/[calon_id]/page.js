@@ -22,11 +22,9 @@ const DetaulCalonPage = async ({ params: { calon_id } }) => {
     }
   );
 
-  console.log(data);
-
   return (
     <section>
-      {data.map(calon => (
+      {data?.map(calon => (
         <div key={calon.id} className="w-full h-full">
           <div className="text-2xl font-semibold mb-4">
             Nomor Urut Calon : {calon.no_urut}

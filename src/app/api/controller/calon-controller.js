@@ -8,7 +8,6 @@ export class CalonController {
   static async create(req) {
     try {
       const userReq = await req.json();
-      console.log(userReq);
       const response = await CalonService.create(userReq);
       return NextResponse.json(response, { status: 200 });
     } catch (error) {
@@ -87,6 +86,18 @@ export class CalonController {
       const response = await CalonService.update(userReq, calon_id);
 
       return NextResponse.json(response, { status: 200 });
+    } catch (error) {
+      return errorResponse(error);
+    }
+  }
+
+  static async suaraCalon(req) {
+    try {
+      const request = await req.json();
+      Validation.Validate(CalonValidation.PRODI, request);
+
+      const datas = await CalonService.suaraCalon(request);
+      return NextResponse.json(datas, { status: 200 });
     } catch (error) {
       return errorResponse(error);
     }

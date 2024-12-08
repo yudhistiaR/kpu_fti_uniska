@@ -30,8 +30,6 @@ export class VotingServices {
       secure: true,
       httpOnly: true
     });
-
-    return;
   }
 
   static async voting(req, token) {
@@ -43,6 +41,10 @@ export class VotingServices {
           401,
           'Panitia tidak diperbolehkan melakukan voting'
         );
+      }
+
+      if (decoded.status_akun !== 'MAHASISWA') {
+        throw new ErrorResponse(401, 'Status akun anda bukan mahasiswa aktif');
       }
 
       if (decoded.status_akun === 'Pelaksana') {

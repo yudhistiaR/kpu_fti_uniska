@@ -21,7 +21,7 @@ const LoginPage = () => {
   const formRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [datas, setDatas] = useState({
-    npm: '',
+    username: '',
     password: ''
   });
 
@@ -31,7 +31,6 @@ const LoginPage = () => {
 
     return await fetch('/api/v1/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datas)
     })
       .then(async res => {
@@ -83,8 +82,8 @@ const LoginPage = () => {
             <Input
               disabled={isLoading}
               required
-              name="npm"
-              defaultValue={datas?.npm}
+              name="username"
+              defaultValue={datas?.username}
               placeholder="NPM"
               onChange={onChange}
               type="number"
