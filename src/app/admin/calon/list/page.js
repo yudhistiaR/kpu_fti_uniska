@@ -1,7 +1,6 @@
+'use client';
 import dynamic from 'next/dynamic';
-const ListCalon = dynamic(() => import('@/components/admin/ListCalon'), {
-  ssr: false
-});
+const ListCalon = dynamic(() => import('@/components/admin/ListCalon'));
 
 const ListCalonPage = () => {
   return (
