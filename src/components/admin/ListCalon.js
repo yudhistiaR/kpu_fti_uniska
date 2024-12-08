@@ -50,30 +50,31 @@ const ListCalon = async () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((item, idx) => (
-            <TableRow key={item.id} className="text-center">
-              <TableCell className="font-medium">{idx + 1}</TableCell>
-              <TableCell className="font-medium">
-                <Image
-                  alt="Foto calon"
-                  src={item.foto}
-                  width={80}
-                  height={80}
-                />
-              </TableCell>
-              <TableCell className="font-medium">{item.nama}</TableCell>
-              <TableCell className="font-medium">{item.no_urut}</TableCell>
-              <TableCell className="font-medium">{item.prodi}</TableCell>
-              <TableCell className="font-medium">{item.angkatan}</TableCell>
-              <TableCell className="font-medium">{item.type}</TableCell>
-              <TableCell className="font-medium text-justify">
-                {parser(item.visiMisi)}
-              </TableCell>
-              <TableCell className="font-medium flex space-x-2 justify-center text-white">
-                <DeleteCalon calonId={item.id} />
-              </TableCell>
-            </TableRow>
-          ))}
+          {data &&
+            data.map((item, idx) => (
+              <TableRow key={item.id} className="text-center">
+                <TableCell className="font-medium">{idx + 1}</TableCell>
+                <TableCell className="font-medium">
+                  <Image
+                    alt="Foto calon"
+                    src={item.foto}
+                    width={80}
+                    height={80}
+                  />
+                </TableCell>
+                <TableCell className="font-medium">{item.nama}</TableCell>
+                <TableCell className="font-medium">{item.no_urut}</TableCell>
+                <TableCell className="font-medium">{item.prodi}</TableCell>
+                <TableCell className="font-medium">{item.angkatan}</TableCell>
+                <TableCell className="font-medium">{item.type}</TableCell>
+                <TableCell className="font-medium text-justify">
+                  {parser(item.visiMisi)}
+                </TableCell>
+                <TableCell className="font-medium flex space-x-2 justify-center text-white">
+                  <DeleteCalon calonId={item.id} />
+                </TableCell>
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </div>
