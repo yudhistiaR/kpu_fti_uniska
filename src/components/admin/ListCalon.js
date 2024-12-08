@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import {
   Table,
@@ -11,28 +13,35 @@ import {
 import Image from 'next/image';
 import parser from 'html-react-parser';
 import { toast } from 'sonner';
+import { useState, useEffect } from 'react';
 
-const DeleteCalon = dynamic(() => import('../action/deleteCalon'), {
-  ssr: false
-});
+const DeleteCalon = dynamic(() => import('../action/deleteCalon'));
 
-const ListCalon = async () => {
+const ListCalon = () => {
+  const [datas, setDatas] = useState([]);
+
   const fetchDataCalon = async () => {
-    return await fetch(`${process.env.API_URL}/api/v1/calon`, {
-      method: 'GET',
-      next: { cache: 'force-cache' }
+    return await fetch(`/api/v1/calon`, {
+      method: 'GET'
     }).then(async res => {
       if (!res.ok) {
         const error = await res.json();
         return toast.error(error.message);
       }
-
-      const datas = await res.json();
-      return datas;
+      const data = await res.json();
+      setDatas(data);
     });
   };
 
-  const { data } = await fetchDataCalon();
+  useEffect(() => {
+    fetchDataCalon();
+  }, []);
+
+  if (datas.length <= 0) {
+    return (
+      <div className="w-full text-lg font-bold text-center">Loading...</div>
+    );
+  }
 
   return (
     <div className="w-full p-4 bg-white rounded-lg shadow-md">
@@ -52,8 +61,8 @@ const ListCalon = async () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data &&
-            data?.map((item, idx) => (
+          {datas &&
+            datas?.data.map((item, idx) => (
               <TableRow key={item.id} className="text-center">
                 <TableCell className="font-medium">{idx + 1}</TableCell>
                 <TableCell className="font-medium">

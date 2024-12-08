@@ -1,6 +1,7 @@
-'use client';
 import dynamic from 'next/dynamic';
-const ListCalon = dynamic(() => import('@/components/admin/ListCalon'));
+const ListCalon = dynamic(() => import('@/components/admin/ListCalon'), {
+  loading: 'Loading...'
+});
 
 const ListCalonPage = () => {
   return (

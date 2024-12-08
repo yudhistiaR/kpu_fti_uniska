@@ -257,3 +257,153 @@ INFO : {"timestamp":"2024-12-08T12:24:55.080Z","query":"BEGIN","params":"[]","du
 INFO : {"timestamp":"2024-12-08T12:24:55.129Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
 INFO : {"timestamp":"2024-12-08T12:24:55.231Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE \"public\".\"Calon\".\"id\" = $1 OFFSET $2","params":"[\"6fa540b7-27ca-4a6d-8157-256e39c1cf02\",0]","duration":101,"target":"quaint::connector::metrics"}
 INFO : {"timestamp":"2024-12-08T12:24:55.280Z","query":"COMMIT","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:14:38.492Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:14:38.544Z","query":"DEALLOCATE ALL","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:14:38.642Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":97,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:14:38.692Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:27:45.975Z","query":"BEGIN","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:27:46.025Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:27:46.125Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:27:46.175Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:34:40.784Z","query":"BEGIN","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:40.834Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:40.934Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:40.985Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.046Z","query":"BEGIN","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.094Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.194Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":100,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.244Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.374Z","query":"BEGIN","params":"[]","duration":46,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.424Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.524Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":96,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.714Z","query":"COMMIT","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.845Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.846Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.944Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":97,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:34:41.973Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:35:26.694Z","query":"BEGIN","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:26.744Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:26.854Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":105,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:26.904Z","query":"COMMIT","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:26.964Z","query":"BEGIN","params":"[]","duration":53,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.015Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.115Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.164Z","query":"COMMIT","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.344Z","query":"BEGIN","params":"[]","duration":59,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.397Z","query":"DEALLOCATE ALL","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.514Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":116,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.567Z","query":"COMMIT","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.629Z","query":"BEGIN","params":"[]","duration":52,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.698Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.785Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":107,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:27.837Z","query":"COMMIT","params":"[]","duration":52,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:35:58.884Z","query":"BEGIN","params":"[]","duration":61,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:58.946Z","query":"DEALLOCATE ALL","params":"[]","duration":64,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.095Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":110,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.139Z","query":"COMMIT","params":"[]","duration":59,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.235Z","query":"BEGIN","params":"[]","duration":59,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.280Z","query":"DEALLOCATE ALL","params":"[]","duration":54,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.720Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":107,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:35:59.721Z","query":"COMMIT","params":"[]","duration":76,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:36:01.046Z","query":"BEGIN","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.165Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.436Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":101,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.436Z","query":"COMMIT","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.518Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.553Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.650Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":106,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:36:01.694Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:38:57.292Z","query":"BEGIN","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.344Z","query":"DEALLOCATE ALL","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.434Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":90,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.482Z","query":"COMMIT","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.532Z","query":"BEGIN","params":"[]","duration":46,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.582Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.682Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":100,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.732Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.923Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:57.973Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.072Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":97,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.122Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.174Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.222Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.322Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:38:58.372Z","query":"COMMIT","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:39:32.953Z","query":"BEGIN","params":"[]","duration":67,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.002Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.101Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.153Z","query":"COMMIT","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.201Z","query":"BEGIN","params":"[]","duration":44,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.251Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.368Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":116,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.427Z","query":"COMMIT","params":"[]","duration":59,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.572Z","query":"BEGIN","params":"[]","duration":52,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.622Z","query":"DEALLOCATE ALL","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.722Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":98,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.772Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.821Z","query":"BEGIN","params":"[]","duration":45,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.871Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:33.974Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:39:34.025Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:40:24.032Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.086Z","query":"DEALLOCATE ALL","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.192Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":106,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.247Z","query":"COMMIT","params":"[]","duration":52,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.304Z","query":"BEGIN","params":"[]","duration":53,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.352Z","query":"DEALLOCATE ALL","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.458Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":100,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:24.517Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.570Z","query":"BEGIN","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.620Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.720Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.770Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.820Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.870Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:27.970Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.020Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.182Z","query":"BEGIN","params":"[]","duration":53,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.220Z","query":"DEALLOCATE ALL","params":"[]","duration":39,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.320Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":100,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.362Z","query":"COMMIT","params":"[]","duration":39,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.411Z","query":"BEGIN","params":"[]","duration":46,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.460Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.560Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:28.611Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T13:40:41.672Z","query":"BEGIN","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:41.720Z","query":"DEALLOCATE ALL","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:41.820Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE \"public\".\"Calon\".\"id\" = $1 OFFSET $2","params":"[\"6cae86fc-eea3-494d-9013-e3e5266bf6ac\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:41.870Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:41.920Z","query":"BEGIN","params":"[]","duration":47,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:41.970Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:42.070Z","query":"DELETE FROM \"public\".\"Calon\" WHERE \"public\".\"Calon\".\"id\" = $1","params":"[\"6cae86fc-eea3-494d-9013-e3e5266bf6ac\"]","duration":100,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:42.120Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:59.141Z","query":"SELECT 1","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:59.194Z","query":"BEGIN","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:59.240Z","query":"DEALLOCATE ALL","params":"[]","duration":45,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:59.340Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE \"public\".\"Calon\".\"id\" = $1 OFFSET $2","params":"[\"6cae86fc-eea3-494d-9013-e3e5266bf6ac\",0]","duration":96,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:40:59.392Z","query":"COMMIT","params":"[]","duration":52,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.090Z","query":"BEGIN","params":"[]","duration":55,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.140Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.240Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.294Z","query":"COMMIT","params":"[]","duration":54,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.350Z","query":"BEGIN","params":"[]","duration":53,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.400Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.500Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.550Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.722Z","query":"BEGIN","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.771Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.870Z","query":"SELECT \"public\".\"Calon\".\"id\", \"public\".\"Calon\".\"nama\", \"public\".\"Calon\".\"visiMisi\", \"public\".\"Calon\".\"prodi\", \"public\".\"Calon\".\"foto\", \"public\".\"Calon\".\"angkatan\", \"public\".\"Calon\".\"no_urut\", \"public\".\"Calon\".\"type\"::text FROM \"public\".\"Calon\" WHERE 1=1 ORDER BY \"public\".\"Calon\".\"no_urut\" ASC OFFSET $1","params":"[0]","duration":98,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.922Z","query":"COMMIT","params":"[]","duration":51,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:06.980Z","query":"BEGIN","params":"[]","duration":55,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:07.030Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:07.140Z","query":"SELECT COUNT(*) FROM (SELECT \"public\".\"Calon\".\"id\" FROM \"public\".\"Calon\" WHERE 1=1 OFFSET $1) AS \"sub\"","params":"[0]","duration":109,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T13:41:07.192Z","query":"COMMIT","params":"[]","duration":51,"target":"quaint::connector::metrics"}
