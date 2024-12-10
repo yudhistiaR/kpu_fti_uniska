@@ -1,0 +1,24 @@
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T16:45:40.550Z","query":"BEGIN","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T16:45:40.600Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T16:45:40.700Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T16:45:40.765Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T17:54:44.960Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.010Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.110Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":98,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.160Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.220Z","query":"BEGIN","params":"[]","duration":57,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.270Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.400Z","query":"INSERT INTO \"public\".\"Pemilih\" (\"npm\",\"nama\",\"prodi\",\"status_hmp\",\"status_bem\",\"status_akun\") VALUES ($1,$2,$3,$4,$5,$6) RETURNING \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\"","params":"[\"2110020054\",\"M. YUDHISTIA RAHMAN\",\"Sistem Informasi\",false,false,\"MAHASISWA\"]","duration":128,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:54:45.450Z","query":"COMMIT","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T17:55:57.902Z","query":"BEGIN","params":"[]","duration":48,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:55:57.953Z","query":"DEALLOCATE ALL","params":"[]","duration":50,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:55:58.055Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":102,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T17:55:58.101Z","query":"COMMIT","params":"[]","duration":45,"target":"quaint::connector::metrics"}
+INFO : "Starting a postgresql pool with 5 connections in PgBouncer mode."
+INFO : {"timestamp":"2024-12-08T18:16:50.311Z","query":"BEGIN","params":"[]","duration":56,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T18:16:50.361Z","query":"DEALLOCATE ALL","params":"[]","duration":49,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T18:16:50.461Z","query":"SELECT \"public\".\"Pemilih\".\"npm\", \"public\".\"Pemilih\".\"nama\", \"public\".\"Pemilih\".\"prodi\", \"public\".\"Pemilih\".\"status_hmp\", \"public\".\"Pemilih\".\"status_bem\", \"public\".\"Pemilih\".\"status_akun\" FROM \"public\".\"Pemilih\" WHERE \"public\".\"Pemilih\".\"npm\" = $1 OFFSET $2","params":"[\"2110020054\",0]","duration":99,"target":"quaint::connector::metrics"}
+INFO : {"timestamp":"2024-12-08T18:16:50.512Z","query":"COMMIT","params":"[]","duration":50,"target":"quaint::connector::metrics"}
